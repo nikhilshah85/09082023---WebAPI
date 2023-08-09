@@ -1,0 +1,22 @@
+WebAPI Developer
+
+1. REST standards
+2. What is Webapi and develop applications useing webapi framework
+3. Web API developer should know
+	a. develop api useing inmemory collection
+	b. develop api useing EF Core on sql server (any RDBMS) - CRUD operations
+	c. how to consume webapi frontend application 
+		client side calls
+		server side calls
+4. use advance features and design patterns
+	a. DI - dependency injection
+	b. ORM pattern - Entity Framework
+	c. Repository pattern (best used in data related applications)
+	d. testing tools 
+		Postman
+		fiddler
+		Swagger (in built with .net core since 5.0 version)
+
+
+
+	

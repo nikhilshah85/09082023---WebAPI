@@ -1,0 +1,16 @@
+Pre-requisite
+
+technically
+
+a. OOPS fundamentals
+b. HTML, CSS and JS
+
+
+softwares
+
+a. Visual Studio 2022 (even 2019 is fine)
+b. SQL Server (2014 or above) - 2016 in my case - express
+c. GIT
+
+if you do not have this softwares installed 
+use Cloud Lab - it has everything installed there
