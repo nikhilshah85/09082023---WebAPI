@@ -1,0 +1,113 @@
+Step 1: Create database and tables
+
+create database employeeManagementDB;
+
+use employeeManagementDB;
+
+create table employeeDetails
+(
+	empNo int primary key,
+	empName varchar(20),
+	empDesignation varchar(20),
+	empSalary int,
+	empIsPermenant bit
+)
+
+insert into employeeDetails values(101,'Sumit','Sales',5000,1)
+insert into employeeDetails values(102,'Manpreet','HR',15000,1)
+insert into employeeDetails values(103,'Sakshi','Sales',53000,0)
+insert into employeeDetails values(104,'Harmeet','Sales',13000,1)
+insert into employeeDetails values(105,'Sujoy','HR',2500,1)
+insert into employeeDetails values(106,'Aman','Sales',1200,0)
+insert into employeeDetails values(107,'Karan','Accounts',7800,1)
+
+step 2: create a new webapi application employeeAPI_EF
+
+step 3 : Applicaiton has no idea about EF - thus we will add Nuget packages in below sequence
+
+		Microsoft.EntityFrameworkCore.Tools
+		Microsoft.EntityFrameworkCore.Design
+		Microsoft.EntityFrameworkCore
+		Microsoft.EntityFrameworkCore.SqlServer
+
+step 4: Download POCO classes - Plain C# Objects
+		this are mapping to database., tables/views, columns, constrains on tables
+
+		we will need to run EF command - Scaffold-DbContext "connection string" ..some parameters
+
+		Tools - Nuget package manager - package manager console
+
+
+	Scaffold-DbContext "server=(localdb)\MSSQLLocalDB;database=employeeManagementDB;integrated security=true;trust server certificate=true" -Provider Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models\EF
+
+
+step 5 : build the application, right click on controller - add new controller - choose API - api controller with actions useing EF
+		choose table name for Model and DBContext name for Data context 
+	this will craete a controller file with all the crud operations
+
+
+step 6 : By default it uses DI (half it configures and half we are suppose to configure based on scenerio and data)
+
+		thus we will remove the halfly configured di as we dont know the other half
+
+		in the controller file 
+		a. Instantiate new object 
+		b. Comment the constructor
+
+	line 16:   private readonly EmployeeManagementDbContext _context = new EmployeeManagementDbContext();
+
+	line 18 to 20
+        //public employeeController(EmployeeManagementDbContext context)
+        //{
+        //    _context = context;
+        //}
+		
+
+step 7: build the application, run the application and test the api, perform CRUD operations and check database
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
