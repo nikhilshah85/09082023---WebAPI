@@ -1,0 +1,17 @@
+Consume WebAPI in frontend (ASP.Net MVC core) but could be Java,angular, android
+
+there are 2 ways to do it 
+a. client side calls (this is the fastest, a bit less secure or uncomfort compared to server side) 
+	-- useing a fetch api - this is a standard api by W3C and ECMA
+	-- Part of every modern browser
+	-- returns a promise (for a client either show the result or show the error info) - do not make client wait
+	-- uses try...catch..finally model for calls
+		then...catch and finally
+
+
+		this is Javascripr based call - we will use JQuery - a short hand to make calls
+
+b. server side calls (this is safest, a little bit slow than the above)
+	-- HttpClient  
+	-- this is also a web standard by w3c and ecma for server side
+		--can be used with C#, VB, C++, Java, Angular, React etc...

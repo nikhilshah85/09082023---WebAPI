@@ -1,0 +1,80 @@
+
+
+
+			Create a WebAPI for Banking System
+
+			have a database bankingDB_API
+
+	1. we need below tables, this tables to be related to each other
+	branchInfo (add 3 records)
+		branchNo int primary key
+		branchName
+		branchCity
+
+	accountsInfo (add 8 records)
+		accNo int primary key
+		accName varchar
+		accType
+		accBalance
+		accIsActive
+		accBranch (foreign key to branchInfo table)
+	transactionInfo (add 15 records)
+		trNo int PK - identity
+		trDate
+		trFromAcc (Fk to accountNo)
+		trToAccount(Fk to accountNo)
+		trAmount
+		trStatus
+
+	2. Create a webapi to perform crud operations on the above tables
+
+	3. use EF Core with SQL Server
+
+
+
+
+
+		create view v_accountView
+		as
+		select * from accountsInfo a ,branchInfo b , transactionInfo t
+		where a.accBranch  = b.branchNo and a.accNo = t.trFromAcc 
+		group by b.branchNo 
+
+
+		[
+		{
+			branchNo:101,
+			branchName:'Cuff Pared'
+			branchCity:'Mumbai',
+			accountsInfo:[
+				{}
+			]
+		}
+	
+		]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
