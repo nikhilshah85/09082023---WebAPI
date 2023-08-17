@@ -1,0 +1,16 @@
+﻿
+
+<h1> Diplay Comments </h1>
+
+<table class="table table-bordered">
+    @foreach (var item in ViewBag.userComments)
+    {
+        <tr>
+            <td> @item.PostId </td>
+            <td> @item.id </td>
+            <td> @item.name </td>
+            <td> @item.email </td>
+            <td> @item.body </td>
+        </tr>
+    }
+</table>

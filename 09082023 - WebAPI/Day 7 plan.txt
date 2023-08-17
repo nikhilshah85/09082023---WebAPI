@@ -1,0 +1,4 @@
+Day 8:
+
+1. understand and implement DI
+2. intro to CORS

@@ -1,0 +1,17 @@
+try useing HttpClient
+
+make a call to users  - this is a nested json / complex json - result
+
+
+https://jsonplaceholder.typicode.com/users
+
+Display 
+in a table
+
+
+	Name userName email City ZipCode lat lng companyname companyCatchphase
+
+
+hint
+	@item.user.address.city
+	@item.user.address.geo.lat
