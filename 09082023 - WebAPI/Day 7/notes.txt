@@ -1,0 +1,34 @@
+More detailed conctepts for API development
+
+1. DI - dependency Injection 
+	takes care of Memory management, state management, clear reference 
+		and help in performance
+2. CORS - Cross Origin Shareing
+	we will have to set CORS policies for our clients / other project in order
+		to get the data
+	(it could be any contents from our  site, image, JSON api calls, video streaming)
+
+------------------------------------------------------------------------------------
+	Let us have a look at patterns for WebAPI
+
+	a. Create a database - airlinesManagement (Normalization)
+		add a table 
+			flightInfo
+				flightNo (Primary key)
+				fromCity
+				toCity
+				availableSeats
+				fare
+	b. Create a WebAPI application (REST standards)
+	c. Add Support for Entity Framework (ORM pattern)
+	d. Create an API controller to perform CRUD operations on flightInfo table
+		add a controller with EF, choose table and DBContext
+
+		do not make any changes in the controller, 
+			run the application - read the error it would be about DI 
+
+		Time : 20 mins
+	
+
+				
+				
